@@ -4,21 +4,17 @@ import { Box } from "@mui/material";
 // atoms
 import SocialButton from "../../atoms/SocialButton";
 // icons
-import { FaGithub, FaLinkedin, FaTwitter, FaDiscord } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaDiscord, FaTwitter } from "react-icons/fa";
 
-function Sidebar() {
+function MobileSocials() {
   return (
     <Box
       sx={{
-        position: "fixed",
-
-        left: "3vw",
-        bottom: 0,
-        zIndex: 1200,
-        display: { xs: "none", sm: "flex" },
-        flexDirection: "column",
-        justifyContent: "flex-start",
+        display: { xs: "flex", sm: "none" },
+        flexDirection: "row",
+        justifyContent: "space-around",
         alignItems: "center",
+        width: 300,
       }}
     >
       <SocialButton title="Github" url="https://github.com/alisherkhan98">
@@ -39,16 +35,8 @@ function Sidebar() {
       >
         <FaDiscord size="20px" />
       </SocialButton>
-      <Box
-        sx={{
-          width: 0,
-          height: "15vh",
-          border: "1px solid #fff",
-          boxShadow: "0 0 5px #c375ff",
-        }}
-      ></Box>
     </Box>
   );
 }
 
-export default Sidebar;
+export default MobileSocials;

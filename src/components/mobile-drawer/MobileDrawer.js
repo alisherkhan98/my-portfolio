@@ -51,43 +51,23 @@ function MobileDrawer({ handleDrawerToggle, mobileOpen, window, navItems }) {
             onClick={handleDrawerToggle}
           >
             <DrawerBtn
-              text="index.html"
-              path="/"
-              icon={
-                <>
-                  <MdKeyboardArrowLeft
-                    size="20px"
-                    preserveAspectRatio="none"
-                    viewBox="6 0 12 24"
-                    style={{ width: 12, color: "#e37933" }}
-                  />
-                  <MdKeyboardArrowRight
-                    size="20px"
-                    preserveAspectRatio="none"
-                    viewBox="6 0 12 24"
-                    style={{ width: 12, color: "#e37933" }}
-                  />
-                </>
-              }
-            />
-            <DrawerBtn
               text="ABOUTME.md"
-              path="/aboutme"
+              url="#aboutme"
               icon={<ImInfo color="#519aba" />}
             />
             <DrawerBtn
               text="skills.js"
-              path="/skills"
+              url="#skills"
               icon={<Typography color="#cbcb41">JS</Typography>}
             />
             <DrawerBtn
               text="my-work.css"
-              path="/work"
+              url="#work"
               icon={<FaHashtag color="#519aba" />}
             />
             <DrawerBtn
               text="contact.ts"
-              path="/contact"
+              url="#contactme"
               icon={<Typography color="#519aba">TS</Typography>}
             />
           </List>

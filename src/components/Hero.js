@@ -4,7 +4,6 @@ import { Box, Container, Grid, Typography } from "@mui/material";
 // images
 import bg from "../images/keyboard.jpg";
 import myself from "../images/my-photo.png";
-import { width } from "@mui/system";
 
 function Hero() {
   return (
@@ -30,7 +29,7 @@ function Hero() {
           position: "absolute",
           top: 0,
           left: 0,
-          backgroundImage: "linear-gradient( #1e1e1e, rgba(0,0,0,0))",
+          backgroundImage: "linear-gradient( #000, rgba(0,0,0,0))",
         }}
       ></Box>
       <Box

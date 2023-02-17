@@ -7,7 +7,7 @@ function AboutMe() {
     <Box
       sx={{
         py: 15,
-        px: { xs: "50px", sm: "100px" },
+        px: { xs: "30px", sm: "100px" },
         display: "flex",
         justifyContent: "center",
         flexDirection: "column",

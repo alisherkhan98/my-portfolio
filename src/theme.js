@@ -13,7 +13,7 @@ let theme = createTheme({
       default: "#1e1e1e",
     },
     text: {
-      primary: "#d4d4d4",
+      primary: "rgba(255,255,255,0.9)",
     },
   },
   typography: {

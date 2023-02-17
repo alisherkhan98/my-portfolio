@@ -10,6 +10,7 @@ import Hero from "./components/Hero";
 import AboutMe from "./components/about-me/AboutMe";
 import Skills from "./components/skills/Skills";
 import Work from "./components/work/Work";
+import ContactMe from "./components/contact-me/ContactMe";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <AboutMe />
         <Skills />
         <Work />
+        <ContactMe />
       </ThemeProvider>
     </>
   );

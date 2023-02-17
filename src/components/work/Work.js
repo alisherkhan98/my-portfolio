@@ -5,7 +5,7 @@ import meditate from "../../images/meditate.jpeg";
 import impact from "../../images/impact.jpeg";
 import hn from "../../images/hackernews.jpg";
 import jsbasic from "../../images/jsbasic.jpg";
-import portfolio from "../../images/portfolio.jpg";
+import portfolio from "../../images/portfolio.jpeg";
 
 import WorkCard from "../work-card/WorkCard";
 const projects = [
@@ -40,8 +40,9 @@ const projects = [
   {
     name: "My portfolio",
     imageUrl: portfolio,
-    githubUrl: "",
-    skills: ["HTML", "CSS", "Scss"],
+    githubUrl: "https://github.com/alisherkhan98/my-portfolio",
+    demoUrl: "https://alisherkhan.netlify.app/",
+    skills: ["React JS", "Material UI"],
   },
 ];
 function Work() {
@@ -75,7 +76,7 @@ function Work() {
           projects and the relative{" "}
           <span style={{ color: "#c586c0" }}>source code</span> on github
         </Typography>
-        <Grid container spacing={7} sx={{ mb: { xs: 8, lg: 15 } }}>
+        <Grid container spacing={7}>
           {projects.map((project) => (
             <WorkCard
               title={project.name}

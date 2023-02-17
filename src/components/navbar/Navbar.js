@@ -8,6 +8,7 @@ import {
   IconButton,
   Toolbar,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 // icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -26,6 +27,8 @@ function Navbar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   // state to show navbar
   const [show, setShow] = React.useState(false);
+
+  const extendedNav = useMediaQuery("(min-width:700px)");
 
   // listener for scroll
   React.useEffect(() => {
@@ -68,7 +71,9 @@ function Navbar() {
               edge="start"
               onClick={handleDrawerToggle}
               sx={{
-                display: { sm: "none" },
+                position: "fixed",
+
+                display: extendedNav ? "none" : "flex",
                 color: "rgba(255,255,255,0.4)",
                 "&:hover": { color: "#fff" },
               }}
@@ -82,7 +87,7 @@ function Navbar() {
               component="div"
               sx={{
                 flexGrow: 1,
-                display: { xs: "none", sm: "block" },
+                textAlign: extendedNav ? "left" : "center",
               }}
             >
               <span
@@ -100,7 +105,7 @@ function Navbar() {
             </Typography>
             <Box
               sx={{
-                display: { xs: "none", sm: "flex" },
+                display: extendedNav ? "flex" : "none",
                 width: "content-fit",
               }}
             >
