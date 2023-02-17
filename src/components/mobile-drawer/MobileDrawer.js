@@ -21,7 +21,7 @@ import { ImInfo } from "react-icons/im";
 
 const drawerWidth = 240;
 
-function MobileDrawer({ handleDrawerToggle, mobileOpen, window, navItems }) {
+function MobileDrawer({ handleDrawerToggle, mobileOpen, window }) {
   const [open, setOpen] = React.useState(true);
 
   const handleClick = () => {
@@ -62,7 +62,7 @@ function MobileDrawer({ handleDrawerToggle, mobileOpen, window, navItems }) {
             />
             <DrawerBtn
               text="my-work.css"
-              url="#work"
+              url="#mywork"
               icon={<FaHashtag color="#519aba" />}
             />
             <DrawerBtn

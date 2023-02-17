@@ -5,6 +5,7 @@ import {
   Box,
   Container,
   CssBaseline,
+  Fade,
   IconButton,
   Toolbar,
   Typography,
@@ -23,7 +24,7 @@ const navItems = [
   { title: "Contact me", tag: "#contactme" },
 ];
 
-function Navbar() {
+function Navbar({ showNav }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   // state to show navbar
   const [show, setShow] = React.useState(false);
@@ -56,66 +57,74 @@ function Navbar() {
       }}
     >
       <CssBaseline />
-      <AppBar
-        component="nav"
-        elevation={show ? 5 : 0}
-        sx={{
-          backgroundColor: show ? "rgba(0,0,0,0.9)" : "transparent",
-        }}
-      >
-        <Container maxWidth="lg">
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              edge="start"
-              onClick={handleDrawerToggle}
-              sx={{
-                position: "fixed",
+      <Fade in={showNav} timeout={1000}>
+        <AppBar
+          component="nav"
+          elevation={show ? 5 : 0}
+          sx={{
+            backgroundColor: show ? "rgba(0,0,0,0.9)" : "transparent",
+            transition: "all 500ms ease",
+          }}
+        >
+          <Container maxWidth="lg">
+            <Toolbar>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                edge="start"
+                onClick={handleDrawerToggle}
+                sx={{
+                  position: "fixed",
 
-                display: extendedNav ? "none" : "flex",
-                color: "rgba(255,255,255,0.4)",
-                "&:hover": { color: "#fff" },
-              }}
-            >
-              <GiHamburgerMenu />
-            </IconButton>
-
-            {/* logo */}
-            <Typography
-              variant="body1"
-              component="div"
-              sx={{
-                flexGrow: 1,
-                textAlign: extendedNav ? "left" : "center",
-              }}
-            >
-              <span
-                style={{
-                  fontWeight: 500,
-                  background: "linear-gradient(0deg, #c375ff, #59c7ff)",
-                  background: "-webkit-linear-gradient(0deg, #c375ff, #59c7ff)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
+                  display: extendedNav ? "none" : "flex",
+                  color: "rgba(255,255,255,0.4)",
+                  "&:hover": { color: "#fff" },
                 }}
               >
-                &lt;Ali Sher Khan&gt;
-              </span>
-            </Typography>
-            <Box
-              sx={{
-                display: extendedNav ? "flex" : "none",
-                width: "content-fit",
-              }}
-            >
-              {navItems.map((item) => (
-                <NavbarBtn key={item.title} title={item.title} tag={item.tag} />
-              ))}
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+                <GiHamburgerMenu />
+              </IconButton>
+
+              {/* logo */}
+              <Typography
+                variant="body1"
+                component="div"
+                sx={{
+                  flexGrow: 1,
+                  textAlign: extendedNav ? "left" : "center",
+                }}
+              >
+                <span
+                  style={{
+                    fontWeight: 500,
+                    background: "linear-gradient(0deg, #c375ff, #59c7ff)",
+                    background:
+                      "-webkit-linear-gradient(0deg, #c375ff, #59c7ff)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  &lt;Ali Sher Khan&gt;
+                </span>
+              </Typography>
+              <Box
+                sx={{
+                  display: extendedNav ? "flex" : "none",
+                  width: "content-fit",
+                }}
+              >
+                {navItems.map((item) => (
+                  <NavbarBtn
+                    key={item.title}
+                    title={item.title}
+                    tag={item.tag}
+                  />
+                ))}
+              </Box>
+            </Toolbar>
+          </Container>
+        </AppBar>
+      </Fade>
 
       <MobileDrawer
         handleDrawerToggle={handleDrawerToggle}

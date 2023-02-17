@@ -6,6 +6,7 @@ import htmlLogo from "../../images/html.png";
 import cssLogo from "../../images/css.png";
 import sassLogo from "../../images/sass.png";
 import jsLogo from "../../images/js.png";
+import webpack from "../../images/webpackpng.png";
 import reactLogo from "../../images/react.png";
 import reduxLogo from "../../images/redux.png";
 import bootstrapLogo from "../../images/bootstrap.png";
@@ -34,6 +35,10 @@ const skills = [
   {
     name: "Javascript ES6",
     image: jsLogo,
+  },
+  {
+    name: "Webpack",
+    image: webpack,
   },
   {
     name: "React JS",
