@@ -14,26 +14,34 @@ import Intro from "./components/intro/Intro";
 // img
 import bg from "./images/keyboard.jpg";
 import myself from "./images/my-photo.png";
+import useImagePreloader from "./hooks/useImagePreloader";
 
 function App() {
   const [introOpen, setIntroOpen] = useState(true);
   const [showContent, setShowContent] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const [showSidebar, setShowSidebar] = useState(false);
+
+  // preload hero images
+  const { imagesPreloaded } = useImagePreloader([bg, myself]);
+
   useEffect(() => {
+    if (!imagesPreloaded) {
+      return;
+    }
     setTimeout(() => {
       setIntroOpen(false);
-    }, 2000);
+    }, 3500);
     setTimeout(() => {
       setShowContent(true);
-    }, 2500);
+    }, 4000);
     setTimeout(() => {
       setShowNav(true);
-    }, 4000);
+    }, 5000);
     setTimeout(() => {
       setShowSidebar(true);
-    }, 4000);
-  }, []);
+    }, 5000);
+  }, [imagesPreloaded]);
 
   return (
     <>

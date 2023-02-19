@@ -1,7 +1,16 @@
 import { Box, Fade, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
+import Typewriter from "typewriter-effect/dist/core";
+
+import "./Intro.css";
 
 function Intro({ introOpen }) {
+  var introText = document.getElementById("introText");
+
+  var typewriter = new Typewriter(introText);
+
+  typewriter.typeString("Welcome").start().pauseFor(1000).deleteAll("natural");
+
   return (
     <Fade in={introOpen} appear={false}>
       <Box
@@ -18,7 +27,12 @@ function Intro({ introOpen }) {
           alignItems: "center",
         }}
       >
-        <Typography variant="h4">Welcome</Typography>
+        <Typography
+          sx={{ width: "fit-content" }}
+          className="typewriter"
+          variant="h4"
+          id="introText"
+        ></Typography>
       </Box>
     </Fade>
   );
