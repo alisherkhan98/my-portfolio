@@ -10,7 +10,6 @@ import {
   IconButton,
   Link,
   Typography,
-  useMediaQuery,
 } from "@mui/material";
 
 import { FiGithub } from "react-icons/fi";

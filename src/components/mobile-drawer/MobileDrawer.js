@@ -11,11 +11,7 @@ import {
   Typography,
 } from "@mui/material";
 import DrawerBtn from "../../atoms/DrawerBtn";
-import {
-  MdKeyboardArrowRight,
-  MdKeyboardArrowDown,
-  MdKeyboardArrowLeft,
-} from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
 import { FaHashtag } from "react-icons/fa";
 import { ImInfo } from "react-icons/im";
 

@@ -2,7 +2,6 @@ import {
   Box,
   Fade,
   Grid,
-  Slide,
   Stack,
   Typography,
   useMediaQuery,

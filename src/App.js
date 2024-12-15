@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Fade, ThemeProvider } from "@mui/material";
 // MUI
 import { theme } from "./theme";

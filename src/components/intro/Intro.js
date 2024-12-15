@@ -1,5 +1,5 @@
 import { Box, Fade, Typography } from "@mui/material";
-import React, { useEffect } from "react";
+import React from "react";
 import Typewriter from "typewriter-effect/dist/core";
 
 import "./Intro.css";
